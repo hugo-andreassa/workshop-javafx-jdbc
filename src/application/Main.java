@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 	
+	private static Scene mainScene;
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -22,16 +24,20 @@ public class Main extends Application {
 			scrollPane.setFitToWidth(true);
 			
 			// Carrega o Parent como uma cena
-			Scene mainScene = new Scene(scrollPane);
-			// Set o mainScene como um estagio
+			mainScene = new Scene(scrollPane);
+			// Set o mainScene no palco
 			primaryStage.setScene(mainScene);
-			// Coloca um título no estagio
+			// Coloca um título
 			primaryStage.setTitle("Sample JavaFX Application");
-			// Mostra o estagio
+			// Mostra o palco
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static Scene getMainScene() {
+		return mainScene;
 	}
 	
 	public static void main(String[] args) {
