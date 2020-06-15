@@ -40,12 +40,12 @@ public class MainViewController implements Initializable {
 	
 	@FXML
 	public void onMenuItemDepartmentAction() {
-		loadView("/gui/DepartmentListView.fxml");
+		loadView("/gui/DepartmentList.fxml");
 	}
 	
 	@FXML
 	public void onMenuItemAboutAction() {
-		loadView("/gui/AboutView.fxml");
+		loadView("/gui/About.fxml");
 	}
 	
 	private void loadView(String absName) {
